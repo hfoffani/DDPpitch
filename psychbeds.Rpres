@@ -1,28 +1,45 @@
-psychbeds
+Psychiatric beds in European Hospitals
 ========================================================
-author: 
-date: 
+author: Hernán
+date: November 21th, 2014
 
-First Slide
-========================================================
 
-For more details on authoring R presentations click the
-**Help** button on the toolbar.
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-Slide With Code
+Differences
 ========================================================
 
-```{r}
-summary(cars)
+Differences in European countries (EU28) regarding psychiatric
+treatmeant.
+
+- Social stigma.
+- Less attention from public.
+
+
+Research
+========================================================
+
+Data obtained from Eurstats.
+
+- Hospital beds
+
+http://ec.europa.eu/eurostat/product?code=tps00046
+
+- Psychiatric care beds in hospitals
+
+http://ec.europa.eu/eurostat/product?code=tps00047
+
+- Missing 2011 data from Netherlands, Greece, Denmark & Luxembourg
+
+
+Code
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
 ```
 
-Slide With Plot
-========================================================
 
+Chart
+========================================================
 ```{r, echo=FALSE}
 plot(cars)
 ```

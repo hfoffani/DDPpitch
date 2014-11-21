@@ -1,6 +1,9 @@
 
 To do:
 
+1. + test Rpres
+2. publish github test
+3. README.md
 4. pitch
         use the Rmd of script. + text!
     slide 1
