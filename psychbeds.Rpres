@@ -14,9 +14,10 @@ treatment. Possible causes:
 - Less attention from public.
 
 We found that the number of beds dedicated to psychiatric
-treatment in hospitals per capita varies **much more** between
+treatment in hospitals per 100,000 inhabitants
+varies **much more** between
 countries than the total number of beds in hospitals per
-capita.
+100,000 inhabitants.
 
 
 Research
@@ -81,7 +82,7 @@ ggplot(beds, aes(x=Hospital, y=Psychiatric, label=Country)) +
 ```
 
 
-Summary
+Conclusions
 ========================================================
 
 Coefficient of Variation $(\sigma/\mu)$ between European countries
