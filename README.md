@@ -1,5 +1,4 @@
-Psychiatric beds in European Hospitals (presentation)
-========================================================
+### Psychiatric beds in European Hospitals (presentation)
 
 Source code for the Rpubs presentation.
 URL of the presentation: http://rpubs.com/herchu1/43094
