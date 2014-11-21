@@ -36,7 +36,7 @@ http://ec.europa.eu/eurostat/product?code=tps00047
 - Missing 2011 data from Netherlands, Greece, Denmark & Luxembourg
 
 
-Hospital beds vs. Psychiatric beds
+Psychiatric vs. Non Psychiatric beds
 ========================================================
 
 ```{r, echo=FALSE}
@@ -68,17 +68,23 @@ psyc28$code <- NULL
 
 beds <- cbind(hosp28[,c('Country','2011')], psyc28[,'2011'])
 names(beds) <- cbind('Country','Hospital','Psychiatric')
-beds$Relation <- beds$Psychiatric / beds$Hospital
+beds$Relation <- beds$Psychiatric / beds$Hospital * 100
 beds <- beds[complete.cases(beds),]
 ```
 
 ```{r, echo=FALSE, fig.width=12}
 library(ggplot2)
 
-ggplot(beds, aes(x=Hospital, y=Psychiatric, label=Country)) +
+y_lab <- "Psychiatric beds per 100K inhabitants."
+x_lab <- "Non-psyc beds in hospitals per 100K inhabitants."
+ggplot(beds, aes(x=Hospital-Psychiatric,
+                    y=Psychiatric,
+                    label=Country)) +
     geom_text(vjust=1) +
-    geom_point(aes(size=Relation*100))
-
+    geom_point(aes(size=Relation)) +
+    scale_size("Psyc relative\nto Total beds\nin percent") +
+    ylab(y_lab) +
+    xlab(x_lab)
 ```
 
 
