@@ -69,7 +69,9 @@ beds <- cbind(hosp28[,c('Country','2011')], psyc28[,'2011'])
 names(beds) <- cbind('Country','Hospital','Psychiatric')
 beds$Relation <- beds$Psychiatric / beds$Hospital
 beds <- beds[complete.cases(beds),]
+```
 
+```{r, echo=FALSE, fig.width=12}
 library(ggplot2)
 
 ggplot(beds, aes(x=Hospital, y=Psychiatric, label=Country)) +
@@ -82,14 +84,14 @@ ggplot(beds, aes(x=Hospital, y=Psychiatric, label=Country)) +
 Summary
 ========================================================
 
-Coefficient of Variation between European countries  of the Total number of
-beds in Hospitals:
+Coefficient of Variation $(\sigma/\mu)$ between European countries
+of the Total number of beds in Hospitals:
 ```{r}
 sd(beds$Hospital) / mean(beds$Hospital)
 ```
 
-Coefficient of Variation between European countries of the number of beds
-in Hospitals reserved for Psychiatric treatment:
+Coefficient of Variation  $(\sigma/\mu)$ between European countries of the
+number of beds in Hospitals reserved for Psychiatric treatment:
 ```{r}
 sd(beds$Psychiatric) / mean(beds$Psychiatric)
 ```
